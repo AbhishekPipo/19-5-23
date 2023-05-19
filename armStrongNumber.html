@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum=0;
+        function armstrong(number){
+            let temp=number;
+            while(temp>0){
+                //find the one's digit
+                let rem=temp%10;
+                sum+=rem*rem*rem;
+                //removing the last digit from the number
+
+                temp=parseInt(temp/10);
+
+            }
+            if(number===sum){
+                return console.log(`${number} is armstrong`);
+            }else{
+                return console.log(`${number} is not armstrong`);
+            }
+        }
+
+        armstrong(153);
+    </script>
+</body>
+</html>
